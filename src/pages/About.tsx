@@ -5,7 +5,7 @@ import aboutImg from "@/assets/spices-about.jpg";
 import { Target, Eye, Heart } from "lucide-react";
 
 const values = [
-  { icon: Target, title: "Our Mission", desc: "To make quality Indian spices and agro products easy to source with transparent communication, dependable APMC supply and fair market pricing." },
+  { icon: Target, title: "Our Mission", desc: "To make quality Indian spices and agro products easy to source with transparent communication, dependable supply and fair market pricing." },
   { icon: Eye, title: "Our Vision", desc: "To establish Waris Brother Enterprises as the most dependable and quality-focused export partner for clean, fresh, and sortex-graded Indian agro commodities." },
   { icon: Heart, title: "Our Promise", desc: "Honest dealing, rigorous quality selection, and responsive support from first product inquiry to final container dispatch." },
 ];
@@ -24,7 +24,7 @@ const About = () => (
               {COMPANY.name} supplies Indian spices, seeds, grains, herbs and agro products for buyers who need dependable quality and quick product clarity.
             </p>
             <p>
-              Our address is based around the existing APMC Market trade location in Vashi, Navi Mumbai, giving the business practical access to a wide range of spice and agricultural products.
+              Our address is based in Thane, Maharashtra, giving the business practical access to a wide range of spice and agricultural products.
             </p>
             <p>
               Product photos, packing options and wholesale prices are shared on request so customers receive details that match the current grade, quantity and market rate.

@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1 text-amber-300 font-semibold uppercase tracking-wider">
-              <Sparkles className="w-3 h-3 text-amber-400" /> APMC Market Vashi
+              <Sparkles className="w-3 h-3 text-amber-400" /> Thane, Maharashtra
             </span>
             <span className="text-white/40">•</span>
             <span className="text-white/80 hidden md:inline">

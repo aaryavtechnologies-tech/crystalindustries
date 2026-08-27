@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               <MapPin className="w-5 h-5 text-amber-400" />
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-white">APMC Market Vashi</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-white">Thane, Maharashtra</p>
               <p className="text-[11px] text-white/70">Direct sourcing from premier trade hub</p>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Footer: React.FC = () => {
           </p>
 
           <p className="text-[11px] text-white/40">
-            APMC Market Vashi • Navi Mumbai • Maharashtra, India
+            Thane • Maharashtra • India
           </p>
 
           <button

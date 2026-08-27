@@ -32,8 +32,8 @@ import ProductQuickView from "@/components/ProductQuickView";
 const features = [
   {
     image: directSourcing,
-    title: "Direct APMC Market Sourcing",
-    desc: "Direct procurement from primary growers and India's premier agricultural hub in APMC Market Vashi for unmatched freshness and lot consistency.",
+    title: "Direct Market Sourcing",
+    desc: "Direct procurement from primary growers for unmatched freshness and lot consistency.",
   },
   {
     image: globalReach,
@@ -102,7 +102,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/15 text-primary border border-primary/25 text-xs uppercase font-bold tracking-widest mb-6"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>APMC Market Vashi • Wholesale & Global Export</span>
+              <span>Thane, Maharashtra • Wholesale & Global Export</span>
             </motion.div>
 
             <motion.h1
@@ -159,7 +159,7 @@ const Index = () => {
             >
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
-                <span>APMC Vashi Direct</span>
+                <span>Direct Wholesale</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
@@ -198,7 +198,7 @@ const Index = () => {
                 Featured <span className="gold-gradient-text">Spices & Commodities</span>
               </h2>
               <p className="text-xs sm:text-sm text-muted-foreground mt-2 max-w-xl">
-                High-demand export spices and seeds sourced directly from APMC Market Vashi.
+                High-demand export spices and seeds sourced directly from Maharashtra.
                 Click any product to view full specifications or get instant WhatsApp pricing.
               </p>
             </div>
@@ -289,7 +289,7 @@ const Index = () => {
           <SectionHeading
             subtitle="Why Partner With Us"
             title="Reliable Indian Spice & Agro Supply"
-            description="Crystal Industries provides clear communication, direct APMC sourcing, and dependable dispatch timelines for serious traders and food companies."
+            description="Crystal Industries provides clear communication, direct sourcing, and dependable dispatch timelines for serious traders and food companies."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((f, i) => (
@@ -330,7 +330,7 @@ const Index = () => {
 
           <p className="text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
             Contact {COMPANY.name} for available spice grades, batch photos, packing specifications,
-            and current wholesale APMC market quotations.
+            and current wholesale market quotations.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

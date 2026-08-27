@@ -31,9 +31,9 @@ describe("Waris Brother Enterprises Product Catalog", () => {
     });
   });
 
-  it("company metadata should reflect Crystal Industries and APMC Market Vashi", () => {
+  it("company metadata should reflect Crystal Industries and Thane", () => {
     expect(COMPANY.name).toBe("Crystal Industries");
-    expect(COMPANY.phone).toBe("+91 91572 91922");
-    expect(COMPANY.address).toContain("APMC Market, Vashi, Navi Mumbai");
+    expect(COMPANY.email).toBe("CRYSTALINDUSTRIES91@gmail.com");
+    expect(COMPANY.address).toContain("THANE");
   });
 });

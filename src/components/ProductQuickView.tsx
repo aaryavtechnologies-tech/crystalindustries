@@ -114,7 +114,7 @@ export const ProductQuickView: React.FC<ProductQuickViewProps> = ({
                   {product.category}
                 </span>
                 <p className="text-xs text-white/80 flex items-center gap-1 drop-shadow-sm">
-                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400" /> APMC Market Vashi Certified
+                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400" /> Premium Quality Certified
                 </p>
               </div>
             </div>

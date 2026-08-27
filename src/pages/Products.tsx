@@ -102,7 +102,7 @@ const Products = () => {
             className="text-white/80 mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto drop-shadow-md font-medium"
           >
             Browse all 69+ authentic whole spices, cold-ground powders, agricultural seeds, grains,
-            and herbs from APMC Market Vashi. Real photography, grades and wholesale rates on request.
+            and herbs from Maharashtra. Real photography, grades and wholesale rates on request.
           </motion.p>
         </div>
       </section>
@@ -242,7 +242,7 @@ const Products = () => {
                       <span>{currentCategoryObj.priceNote}</span>
                     </div>
                     <span className="text-muted-foreground text-xs">
-                      • Direct APMC Vashi Dispatch • Container & Bag Sizing
+                      • Direct Dispatch • Container & Bag Sizing
                     </span>
                   </div>
                 </div>
