@@ -9,6 +9,7 @@ import { WHATSAPP_URL } from "@/components/WhatsAppButton";
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [showFallback, setShowFallback] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ const Contact = () => {
     );
     const mailtoUrl = `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
     window.location.href = mailtoUrl;
-    setForm({ name: "", email: "", message: "" });
+    setShowFallback(true);
   };
 
   return (
@@ -64,6 +65,19 @@ const Contact = () => {
                 <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity">
                   <Send className="w-4 h-4" /> Send Message
                 </button>
+                {showFallback && (
+                  <div className="pt-4 border-t border-border mt-4 animate-in fade-in slide-in-from-top-2">
+                    <p className="text-sm text-muted-foreground mb-3 text-center">Didn't open your email app? Try using Gmail directly:</p>
+                    <a
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${COMPANY.email}&su=${encodeURIComponent(`Product Inquiry from ${form.name}`)}&body=${encodeURIComponent(`Hello Crystal Industries,\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-medium text-sm hover:bg-red-700 transition-colors shadow-sm"
+                    >
+                      <Mail className="w-4 h-4" /> Send via Gmail (Web)
+                    </a>
+                  </div>
+                )}
               </form>
             </AnimatedSection>
 
