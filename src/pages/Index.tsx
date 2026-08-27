@@ -67,6 +67,9 @@ const Index = () => {
           src={heroImg}
           alt="Premium Indian Spices from Crystal Industries"
           className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         <div className="absolute inset-0 hero-overlay" />
 
@@ -77,6 +80,8 @@ const Index = () => {
           className="spice-float absolute right-6 top-32 hidden w-44 lg:w-60 rounded-full border-8 border-background/80 shadow-2xl md:block object-cover"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          decoding="async"
+          loading="lazy"
           transition={{ delay: 0.4 }}
         />
         <motion.img
