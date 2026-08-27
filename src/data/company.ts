@@ -4,7 +4,7 @@ export const COMPANY = {
   email: "CRYSTALINDUSTRIES91@gmail.com",
   phone: "+91 91572 91922",
   phoneHref: "+919157291922",
-  address: "Office No 19, APMC Market, Vashi, Navi Mumbai, Maharashtra 400703, India",
+  address: "4TH FLOOR, 86 VALDAS NAGARJANARDAN PARK, RAGHUNATH NAGAR, THANE, MAHARASHTRA, 400604",
   tagline: "Fresh Indian Spices, Seeds, Grains and Agro Products for Reliable Bulk Supply.",
   quoteNote: "Bulk, wholesale and container pricing available on request.",
   website: "https://crystalindustries.in",

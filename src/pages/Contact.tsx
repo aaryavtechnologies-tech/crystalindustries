@@ -8,16 +8,17 @@ import { WHATSAPP_URL } from "@/components/WhatsAppButton";
 
 const Contact = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = encodeURIComponent(
-      `Hello Crystal Industries,\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nMessage:\n${form.message}`
+    const subject = encodeURIComponent(`Product Inquiry from ${form.name}`);
+    const body = encodeURIComponent(
+      `Hello Crystal Industries,\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
     );
-    const whatsappUrl = `https://wa.me/${COMPANY.phoneHref.replace("+", "")}?text=${whatsappMessage}`;
-    window.open(whatsappUrl, "_blank");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    const mailtoUrl = `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoUrl;
+    setForm({ name: "", email: "", message: "" });
   };
 
   return (
@@ -36,7 +37,6 @@ const Contact = () => {
                 {[
                   { name: "name" as const, label: "Full Name", type: "text", placeholder: "Your name" },
                   { name: "email" as const, label: "Email", type: "email", placeholder: "your@email.com" },
-                  { name: "phone" as const, label: "Phone", type: "tel", placeholder: "+91 ..." },
                 ].map((f) => (
                   <div key={f.name}>
                     <label className="block text-sm font-medium text-foreground mb-1.5">{f.label}</label>
