@@ -9,7 +9,7 @@ const reasons = [
   { icon: ShieldCheck, title: "Fresh Product Focus", desc: "Products are selected with attention to color, aroma, cleanliness and suitability for the buyer's requirement." },
   { icon: Globe, title: "Trade Ready Range", desc: "A broad catalogue covering whole spices, ground powders, seeds, herbs, grains, dehydrated products and more." },
   { icon: Leaf, title: "Natural Spice Appeal", desc: "A refreshing light brand experience that reflects clean, fresh and authentic Indian flavors." },
-  { icon: Users, title: "Direct Communication", desc: "Customers can call, WhatsApp or email for product details, images, packing information and price updates." },
+  { icon: Users, title: "Direct Communication", desc: "Customers can email for product details, images, packing information and price updates." },
   { icon: CheckCircle, title: "Pricing On Request", desc: "Current rates are shared by quantity and grade so buyers receive relevant wholesale quotations." },
 ];
 

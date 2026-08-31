@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageCircle, Phone, MapPin, Package, Award, CheckCircle2, ShieldCheck } from "lucide-react";
+import { X, MapPin, Package, Award, CheckCircle2, ShieldCheck } from "lucide-react";
 import { ProductItem } from "@/data/products";
 import { COMPANY } from "@/data/company";
 
@@ -43,10 +43,7 @@ export const ProductQuickView: React.FC<ProductQuickViewProps> = ({
 
   const initials = product.name.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
 
-  const whatsappMessage = encodeURIComponent(
-    `Hello Crystal Industries, I would like to request an official quotation & specifications for:\n\n*Product:* ${product.name}\n*Category:* ${product.category}\n*Grade:* ${product.grade}\n*Origin:* ${product.origin}\n*Packaging Required:* Bulk / Container\n\nPlease send wholesale FOB/CIF rates.`
-  );
-  const whatsappUrl = `https://wa.me/${COMPANY.phoneHref.replace("+", "")}?text=${whatsappMessage}`;
+
 
   return (
     <AnimatePresence>
@@ -186,26 +183,7 @@ export const ProductQuickView: React.FC<ProductQuickViewProps> = ({
                 </div>
               </div>
 
-              {/* Call to Actions */}
-              <div className="space-y-2 pt-3 border-t border-border">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] text-white font-semibold text-xs hover:bg-[#20ba5a] transition-all shadow-md active:scale-98"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  Instant WhatsApp Quotation
-                </a>
 
-                <a
-                  href={`tel:${COMPANY.phoneHref}`}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-primary/40 bg-primary/5 text-primary font-medium text-xs hover:bg-primary hover:text-white transition-all"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  Call: {COMPANY.phone}
-                </a>
-              </div>
             </div>
           </div>
         </motion.div>

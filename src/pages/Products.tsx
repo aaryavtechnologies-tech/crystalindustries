@@ -17,7 +17,7 @@ import {
   Layers,
   X,
   PackageCheck,
-  PhoneCall,
+  Mail,
   Check
 } from "lucide-react";
 
@@ -288,7 +288,7 @@ const Products = () => {
           <AnimatedSection className="mt-16">
             <div className="relative rounded-2xl overflow-hidden glass-card p-8 md:p-12 text-center border border-primary/20 bg-gradient-to-b from-card to-primary/5">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <PhoneCall className="w-6 h-6 text-primary" />
+                <Mail className="w-6 h-6 text-primary" />
               </div>
 
               <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
@@ -306,12 +306,7 @@ const Products = () => {
                 >
                   Request Official Quotation <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a
-                  href={`tel:${COMPANY.phoneHref}`}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-border bg-background text-foreground text-xs sm:text-sm font-medium hover:border-primary/50 transition-all"
-                >
-                  Direct Call: {COMPANY.phone}
-                </a>
+
               </div>
             </div>
           </AnimatedSection>

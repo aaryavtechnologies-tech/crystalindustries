@@ -13,7 +13,7 @@ import {
   CheckCircle2,
   ChevronRight
 } from "lucide-react";
-import { WHATSAPP_URL } from "@/components/WhatsAppButton";
+
 import { COMPANY } from "@/data/company";
 import { allProducts, productCategories, ProductItem } from "@/data/products";
 import heroImg from "@/assets/hero-spices.jpg";
@@ -139,15 +139,7 @@ const Index = () => {
               >
                 Explore 69+ Products <ArrowRight className="w-4 h-4" />
               </Link>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm tracking-wide bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-98 transition-all shadow-lg"
-              >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>WhatsApp Price Inquiry</span>
-              </a>
+
             </motion.div>
 
             {/* Micro Trust Points */}
@@ -199,7 +191,7 @@ const Index = () => {
               </h2>
               <p className="text-xs sm:text-sm text-muted-foreground mt-2 max-w-xl">
                 High-demand export spices and seeds sourced directly from Maharashtra.
-                Click any product to view full specifications or get instant WhatsApp pricing.
+                Click any product to view full specifications.
               </p>
             </div>
 

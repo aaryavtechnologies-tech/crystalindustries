@@ -1,22 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Phone,
   Mail,
   MapPin,
-  MessageCircle,
   ArrowUp,
   ShieldCheck,
   Award,
   Globe2,
   ChevronRight
 } from "lucide-react";
-import { COMPANY, WHATSAPP_MESSAGE } from "@/data/company";
+import { COMPANY } from "@/data/company";
 import { productCategories } from "@/data/products";
 import Logo from "@/components/Logo";
 
 const Footer: React.FC = () => {
-  const whatsappUrl = `https://wa.me/${COMPANY.phoneHref.replace("+", "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -91,17 +88,7 @@ const Footer: React.FC = () => {
               </span>
             </div>
 
-            <div className="pt-2 flex items-center gap-3">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-semibold hover:bg-[#20ba5a] transition-all shadow-md"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>WhatsApp Wholesale Desk</span>
-              </a>
-            </div>
+
           </div>
 
           {/* Column 2: Product Catalogue Categories (4 cols) */}
@@ -144,14 +131,6 @@ const Footer: React.FC = () => {
               Get In Touch
             </h4>
             <div className="flex flex-col gap-3 pt-1 text-xs text-white/80">
-              <a
-                href={`tel:${COMPANY.phoneHref}`}
-                className="flex items-center gap-2 hover:text-amber-300 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>{COMPANY.phone}</span>
-              </a>
-
               <a
                 href={`mailto:${COMPANY.email}`}
                 className="flex items-center gap-2 hover:text-amber-300 transition-colors break-all"

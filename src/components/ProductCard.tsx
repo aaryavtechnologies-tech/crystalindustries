@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Eye, MapPin, Package, Award } from "lucide-react";
+import { Eye, MapPin, Package, Award } from "lucide-react";
 import { ProductItem } from "@/data/products";
 import { COMPANY } from "@/data/company";
 
@@ -18,10 +18,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgError, setImgError] = useState(false);
 
-  const whatsappMessage = encodeURIComponent(
-    `Hello Crystal Industries, I'm interested in *${product.name}* from ${product.origin}. Please share current bulk pricing, available packing options, and payment terms.`
-  );
-  const whatsappUrl = `https://wa.me/${COMPANY.phoneHref.replace("+", "")}?text=${whatsappMessage}`;
+
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -136,23 +133,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Card Footer Actions */}
         <div className="mt-4 pt-3 border-t border-border/60 flex items-center gap-2">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg text-xs font-semibold bg-[#25D366] text-white hover:bg-[#20ba5a] active:scale-98 transition-all shadow-sm"
-          >
-            <MessageCircle className="w-3.5 h-3.5 fill-current" />
-            <span>WhatsApp Price</span>
-          </a>
-
           <button
             type="button"
             onClick={() => onQuickView?.(product)}
             title="View full specifications & packing"
-            className="p-2.5 rounded-lg border border-border bg-muted/40 hover:bg-primary/10 hover:border-primary/50 text-foreground transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 p-2.5 rounded-lg border border-border bg-muted/40 hover:bg-primary/10 hover:border-primary/50 text-foreground transition-colors text-xs font-semibold"
           >
-            <Eye className="w-4 h-4 text-primary" />
+            <Eye className="w-4 h-4 text-primary" /> View Specs
           </button>
         </div>
       </div>

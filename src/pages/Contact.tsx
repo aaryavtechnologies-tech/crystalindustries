@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { useToast } from "@/hooks/use-toast";
 import { COMPANY } from "@/data/company";
-import { WHATSAPP_URL } from "@/components/WhatsAppButton";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -85,14 +85,8 @@ const Contact = () => {
               <div className="glass-card p-8 space-y-5">
                 <h3 className="font-serif text-xl font-semibold text-foreground">Contact Information</h3>
                 <div className="space-y-4 text-sm">
-                  <a href={`tel:${COMPANY.phoneHref}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                    <Phone className="w-5 h-5 text-primary shrink-0" /> {COMPANY.phone}
-                  </a>
                   <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                     <Mail className="w-5 h-5 text-primary shrink-0" /> {COMPANY.email}
-                  </a>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                    <MessageCircle className="w-5 h-5 text-primary shrink-0" /> WhatsApp for product images and prices
                   </a>
                   <div className="flex items-start gap-3 text-muted-foreground">
                     <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, MessageCircle, ArrowRight, Sparkles, MapPin, Search } from "lucide-react";
+import { Menu, X, ArrowRight, Sparkles, MapPin, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { COMPANY, WHATSAPP_MESSAGE } from "@/data/company";
+import { COMPANY } from "@/data/company";
 import Logo from "@/components/Logo";
 
 const navLinks = [
@@ -19,7 +19,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const whatsappUrl = `https://wa.me/${COMPANY.phoneHref.replace("+", "")}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,23 +50,6 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-4 font-medium">
-            <a
-              href={`tel:${COMPANY.phoneHref}`}
-              className="flex items-center gap-1.5 hover:text-amber-300 transition-colors"
-            >
-              <Phone className="w-3 h-3 text-amber-400" />
-              <span>{COMPANY.phone}</span>
-            </a>
-            <span className="text-white/40">•</span>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors"
-            >
-              <MessageCircle className="w-3 h-3 fill-current" />
-              <span>WhatsApp Inquiries</span>
-            </a>
           </div>
         </div>
       </div>
@@ -120,15 +103,7 @@ const Navbar = () => {
               <Search className="w-4 h-4" />
             </Link>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#25D366]/15 text-[#1fad53] hover:bg-[#25D366]/25 text-xs font-semibold transition-all border border-[#25D366]/30"
-            >
-              <MessageCircle className="w-3.5 h-3.5 fill-current" />
-              <span>WhatsApp</span>
-            </a>
+
 
             <Link
               to="/contact"
@@ -141,15 +116,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-[#25D366] text-white shadow-sm"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle className="w-4 h-4 fill-current" />
-            </a>
+
 
             <button
               onClick={() => setOpen(!open)}
@@ -195,26 +162,7 @@ const Navbar = () => {
                 })}
               </div>
 
-              {/* Mobile Quick Action Buttons */}
-              <div className="pt-3 border-t border-border/80 space-y-2">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] text-white font-semibold text-xs shadow-sm"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>Chat on WhatsApp for Prices</span>
-                </a>
 
-                <a
-                  href={`tel:${COMPANY.phoneHref}`}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-primary/40 bg-primary/5 text-primary font-semibold text-xs"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call Direct: {COMPANY.phone}</span>
-                </a>
-              </div>
 
               {/* Mobile Address Info */}
               <div className="pt-2 text-[11px] text-muted-foreground flex items-start gap-2">
